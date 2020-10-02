@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <i class="icon-menu burger-button"></i>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -129,7 +129,7 @@
         <article class="event">
           <figure class="event-imageContainer">
             <div class="flexible-video">
-              <iframe
+              <!-- <iframe
                 class="youtube-video"
                 width="560"
                 height="315"
@@ -137,7 +137,7 @@
                 frameborder="0"
                 allow="autoplay; picture-in-picture"
                 allowfullscreen
-              ></iframe>
+              ></iframe> -->
             </div>
           </figure>
           <div class="event-detail">
@@ -245,5 +245,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      const ipad = window.matchMedia('screen and (max-width: 767px)'); //mdia queries
+      const menu = document.querySelector('.menu');
+      const burgerButton = document.querySelector('#burger-menu');
+
+      ipad.addListener((event) => {
+        if (event.matches) {
+          burgerButton.addEventListener('click', () => {
+            menu.classList.toggle('is-active');
+          });
+        } else {
+          burgerButton.removeEventListener('clic', () => {
+            menu.classList.toggle('is-active');
+
+            menu.classList.toggle('is-active');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
