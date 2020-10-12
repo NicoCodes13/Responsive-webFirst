@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Leonidas Esteban</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/estilos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
+  </head>
 
-<body>
+  <body>
     <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
-        <div class="container">
-            <figure class="logo">
-                <img src="images/logo.png" height="50" alt="Logo de http://leonidasesteban.com" />
-            </figure>
-            <nav class="menu">
-                <ol>
-                    <li>
-                        <a class="link" href="#portafolio">Portafolio</a>
-                    </li>
-                    <li>
-                        <a class="link" href="#eventos">Experiencia</a>
-                    </li>
-                    <li>
-                        <a class="link" href="#contacto">Trabajemos juntos</a>
-                    </li>
-                </ol>
-            </nav>
-        </div>
+      <div class="container">
+        <figure class="logo">
+          <img
+            src="images/logo.png"
+            height="50"
+            alt="Logo de http://leonidasesteban.com"
+          />
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Portafolio</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Experiencia</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Trabajemos juntos</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
     </header>
     <section class="hero">
-        <div class="container">
-            <h1>
-                Hola! Soy <strong>Leonidas Esteban</strong> <br /> Desarrollador <strong>Javascript</strong> con <br /> pasión por la <strong>enseñanza</strong>
-            </h1>
-            <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio" />
-        </div>
+      <div class="container">
+        <h1>
+          Hola! Soy <strong>Leonidas Esteban</strong> <br />
+          Desarrollador <strong>Javascript</strong> con <br />
+          pasión por la <strong>enseñanza</strong>
+        </h1>
+        <img
+          class="hero-image"
+          src="images/hero.jpg"
+          width="500"
+          height="300"
+          alt="imagen principal del sitio"
+        />
+      </div>
     </section>
     <section id="portafolio" class="portfolio">
-        <div class="container">
-            <h2>Portafolio (Proyectos Destacados)</h2>
-            <article class="project">
-                <div class="project-details">
-                    <h3 class="project-title">Platzi Video</h3>
-                    <h6 class="project-course">React Native / React</h6>
-                    <p class="project-date">
-                        <small><strong>Fecha:</strong> 01/07/2018</small>
-                    </p>
-                    <p class="project-url">
-                        <small><strong>Puedes verlo en:</strong> www.platzi.com/native</small
+      <div class="container">
+        <h2>Portafolio (Proyectos Destacados)</h2>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Platzi Video</h3>
+            <h6 class="project-course">React Native / React</h6>
+            <p class="project-date">
+              <small><strong>Fecha:</strong> 01/07/2018</small>
+            </p>
+            <p class="project-url">
+              <small
+                ><strong>Puedes verlo en:</strong> www.platzi.com/native</small
               >
             </p>
             <p class="project-description">
@@ -77,9 +92,10 @@
             <h6 class="project-course">React Native / React</h6>
             <p class="project-date">
               <small><strong>Fecha:</strong> 01/07/2018</small>
-                    </p>
-                    <p class="project-url">
-                        <small><strong>Puedes verlo en:</strong> www.platzi.com/native</small
+            </p>
+            <p class="project-url">
+              <small
+                ><strong>Puedes verlo en:</strong> www.platzi.com/native</small
               >
             </p>
             <p class="project-description">
@@ -250,7 +266,11 @@
       const menu = document.querySelector('.menu');
       const burgerButton = document.querySelector('#burger-menu');
 
-      ipad.addListener((event) => {
+      ipad.addListener(validation);
+
+      validation(ipad);
+
+      function validation(event) {
         if (event.matches) {
           burgerButton.addEventListener('click', () => {
             menu.classList.toggle('is-active');
@@ -258,11 +278,9 @@
         } else {
           burgerButton.removeEventListener('clic', () => {
             menu.classList.toggle('is-active');
-
-            menu.classList.toggle('is-active');
           });
         }
-      });
+      }
     </script>
   </body>
 </html>
